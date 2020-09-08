@@ -20,9 +20,6 @@ locals {
   app_insights         = "${var.subscription_prefix}-${var.location_prefix}-ai-${var.app_name}"  
 }
 
-data "azurerm_client_config" "current" {
-}
-
 resource "azurerm_resource_group" "app-rg" {
   name      = local.app_resource_group
   location  = var.location
