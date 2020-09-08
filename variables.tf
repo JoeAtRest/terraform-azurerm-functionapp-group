@@ -24,11 +24,13 @@ variable "app_name" {
 
 variable "keyvault_secrets" {
   type        = map
+  default     = {}
   description = "KeyVault secrets required by the function app"  
   }
 
 variable "tags" {
   type        = map
+  default     = {}
   description = "Tags for resources in Azure"
 }
 
@@ -43,7 +45,6 @@ variable "functionapps" {
       secret  = string
     }))     
   }))
-  default = []
   description = <<EOF
   The set of function apps to deploy
   - The name of the function app
@@ -60,7 +61,7 @@ variable "access-policies" {
     key_permissions     = list(string)
     secret_permissions  = list(string)
   }))
-  default = []
+  default = []  
   description = <<EOF
   Key  Vault access policies for internal teams, e.g. to provide the Dev Team with full access
   - tenant_id           : The tenant id of the object to provide with a policy
