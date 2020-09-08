@@ -8,6 +8,8 @@
 #
 # The secrets are also added to the vault at creation time
 
+data "azurerm_client_config" "current" {}
+
 # Make a key vault
 resource "azurerm_key_vault" "app_keyvault" {
   name                = local.app_key_vault
