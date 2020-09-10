@@ -14,7 +14,7 @@ Include the module in you main.tf file along with the variables you need to pass
 
 ```hcl
 module "terraform-functionapp-group" {
-    source = ""
+    source = "JoeAtRest/functionapp-group/azurerm"
 
     subscription_prefix = "dev"
     location_prefix = "uks"
@@ -59,7 +59,7 @@ You can configure the module directly in your main.tf, as shown above but can al
 
 ```hcl
 module "terraform-functionapp-group" {
-    source = ""
+    source = "JoeAtRest/functionapp-group/azurerm"
 
     subscription_prefix = var.subscription_prefix
     location_prefix = var.location_prefix
