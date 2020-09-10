@@ -79,10 +79,3 @@ This allows you split the variables up into subscription/location specific files
 The function apps require zip files, containing the code you have built in your pipeline. These are stored in a storage blob, from where the function app runs them.
 
 When you create the zip files to be deployed you need to ensure they have a unique name, if they do not have a unique name then terraform will assume they have not changed and not update them
-
-## Outputs
-
-This module will output the following
-
-instrumentationkey: Instrumentation key of app insights
-functionappid: A map of all function apps created and their resource id. { "test_functionapp" = "/biglong/azure/resouce/id" }
